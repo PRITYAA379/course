@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SEO 2025 Masterclass: AI-Powered Visibility Course</title>
+
+    <style>
+
+        :root {
+
+            --primary: #2563eb;
+
+            --secondary: #1e40af;
+
+            --accent: #3b82f6;
+
+            --dark: #1f2937;
+
+            --light: #f9fafb;
+
+            --success: #10b981;
+
+            --warning: #f59e0b;
+
+            --danger: #ef4444;
+
+        }
+
+        * {
+
+            margin: 0;
+
+            padding: 0;
+
+            box-sizing: border-box;
+
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+        }
+
+        body {
+
+            background-color: var(--light);
+
+            color: var(--dark);
+
+            line-height: 1.6;
+
+        }
+
+        /* Course Header */
+
+        .course-header {
+
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+
+            color: white;
+
+            padding: 4rem 2rem;
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+        .course-header::after {
+
+            content: "";
+
+            position: absolute;
+
+            bottom: -50px;
+
+            left: 0;
+
+            right: 0;
+
+            height: 100px;
+
+            background: var(--light);
+
+            transform: skewY(-2deg);
+
+            z-index: 1;
+
+        }
+
+        .course-title {
+
+            font-size: 3rem;
+
+            font-weight: 800;
+
+            margin-bottom: 1rem;
+
+            max-width: 900px;
+
+            margin-left: auto;
+
+            margin-right: auto;
+
+        }
+
+        .course-subtitle {
+
+            font-size: 1.25rem;
+
+            opacity: 0.9;
+
+            max-width: 700px;
+
+            margin: 0 auto 2rem;
+
+        }
+
+        .cta-buttons {
+
+            display: flex;
+
+            gap: 1rem;
+
+            justify-content: center;
+
+            margin-top: 2rem;
+
+        }
+
+        .btn {
+
+            padding: 0.75rem 1.5rem;
+
+            border-radius: 0.5rem;
+
+            font-weight: 600;
+
+            cursor: pointer;
+
+            transition: all 0.3s ease;
+
+            text-decoration: none;
+
+            display: inline-block;
+
+        }
+
+        .btn-primary {
+
+            background-color: white;
+
+            color: var(--primary);
+
+        }
+
+        .btn-outline {
+
+            border: 2px solid white;
+
+            color: white;
+
+            background: transparent;
+
+        }
+
+        /* Course Navigation */
+
+        .course-nav {
+
+            background-color: white;
+
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 100;
+
+        }
+
+        .nav-container {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            padding: 1rem 2rem;
+
+            max-width: 1200px;
+
+            margin: 0 auto;
+
+        }
+
+        .course-progress {
+
+            width: 200px;
+
+            height: 8px;
+
+            background-color: #e5e7eb;
+
+            border-radius: 4px;
+
+            overflow: hidden;
+
+        }
+
+        .progress-bar {
+
+            height: 100%;
+
+            background-color: var(--primary);
+
+            width: 0%;
+
+            transition: width 0.3s ease;
+
+        }
+
+        /* Course Content */
+
+        .course-container {
+
+            max-width: 900px;
+
+            margin: 0 auto;
+
+            padding: 2rem;
+
+            position: relative;
+
+            z-index: 2;
+
+        }
+
+        .module {
+
+            background-color: white;
+
+            border-radius: 0.5rem;
+
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+            padding: 2rem;
+
+            margin-bottom: 2rem;
+
+        }
+
+        .module-header {
+
+            display: flex;
+
+            align-items: center;
+
+            margin-bottom: 1.5rem;
+
+        }
+
+        .module-number {
+
+            background-color: var(--primary);
+
+            color: white;
+
+            width: 40px;
+
+            height: 40px;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-weight: 700;
+
+            margin-right: 1rem;
+
+            flex-shrink: 0;
+
+        }
+
+        .module-title {
+
+            font-size: 1.5rem;
+
+            font-weight: 700;
+
+        }
+
+        .lesson {
+
+            padding: 1.5rem;
+
+            border-radius: 0.5rem;
+
+            margin-bottom: 1rem;
+
+            background-color: #f9fafb;
+
+            border-left: 4px solid var(--primary);
+
+        }
+
+        .lesson-title {
+
+            font-size: 1.1rem;
+
+            font-weight: 600;
+
+            margin-bottom: 0.5rem;
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+        .lesson-title::before {
+
+            content: "✓";
+
+            color: var(--success);
+
+            margin-right: 0.5rem;
+
+            font-weight: bold;
+
+        }
+
+        .lesson-content {
+
+            margin-top: 1rem;
+
+        }
+
+        .lesson-complete {
+
+            display: inline-block;
+
+            margin-top: 1rem;
+
+            padding: 0.5rem 1rem;
+
+            background-color: var(--success);
+
+            color: white;
+
+            border-radius: 0.25rem;
+
+            font-size: 0.875rem;
+
+            cursor: pointer;
+
+        }
+
+        /* Interactive Elements */
+
+        .quiz {
+
+            background-color: #f0f9ff;
+
+            border-left: 4px solid var(--accent);
+
+            padding: 1.5rem;
+
+            margin: 1.5rem 0;
+
+            border-radius: 0 0.5rem 0.5rem 0;
+
+        }
+
+        .quiz-question {
+
+            font-weight: 600;
+
+            margin-bottom: 1rem;
+
+        }
+
+        .quiz-options {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 0.5rem;
+
+        }
+
+        .quiz-option {
+
+            padding: 0.75rem;
+
+            background-color: white;
+
+            border: 1px solid #e5e7eb;
+
+            border-radius: 0.5rem;
+
+            cursor: pointer;
+
+            transition: all 0.2s ease;
+
+        }
+
+        .quiz-option:hover {
+
+            border-color: var(--accent);
+
+        }
+
+        .quiz-option.selected {
+
+            background-color: #dbeafe;
+
+            border-color: var(--accent);
+
+        }
+
+        .quiz-feedback {
+
+            margin-top: 1rem;
+
+            padding: 1rem;
+
+            border-radius: 0.5rem;
+
+            display: none;
+
+        }
+
+        .quiz-feedback.correct {
+
+            background-color: #ecfdf5;
+
+            color: var(--success);
+
+            display: block;
+
+        }
+
+        .quiz-feedback.incorrect {
+
+            background-color: #fef2f2;
+
+            color: var(--danger);
+
+            display: block;
+
+        }
+
+        /* Downloadables */
+
+        .downloadables {
+
+            background-color: #f5f3ff;
+
+            padding: 2rem;
+
+            border-radius: 0.5rem;
+
+            margin: 2rem 0;
+
+        }
+
+        .download-title {
+
+            font-size: 1.25rem;
+
+            margin-bottom: 1rem;
+
+            color: #6b21a8;
+
+        }
+
+        .download-list {
+
+            display: grid;
+
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+            gap: 1rem;
+
+        }
+
+        .download-item {
+
+            background-color: white;
+
+            padding: 1rem;
+
+            border-radius: 0.5rem;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 0.5rem;
+
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .download-icon {
+
+            color: var(--primary);
+
+            font-size: 1.5rem;
+
+        }
+
+        /* Course Footer */
+
+        .course-footer {
+
+            text-align: center;
+
+            padding: 3rem 0;
+
+            background-color: var(--dark);
+
+            color: white;
+
+        }
+
+        .footer-cta {
+
+            font-size: 1.5rem;
+
+            margin-bottom: 1.5rem;
+
+        }
+
+        /* Responsive */
+
+        @media (max-width: 768px) {
+
+            .course-title {
+
+                font-size: 2rem;
+
+            }
+
+            
+
+            .cta-buttons {
+
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+            
+
+            .nav-container {
+
+                flex-direction: column;
+
+                gap: 1rem;
+
+            }
+
+            
+
+            .course-progress {
+
+                width: 100%;
+
+            }
+
+        }
+
+        /* Animations */
+
+        @keyframes fadeIn {
+
+            from { opacity: 0; transform: translateY(10px); }
+
+            to { opacity: 1; transform: translateY(0); }
+
+        }
+
+        .module {
+
+            animation: fadeIn 0.5s ease forwards;
+
+        }
+
+        /* Completion Certificate */
+
+        .certificate {
+
+            display: none;
+
+            background-color: white;
+
+            border: 2px solid var(--primary);
+
+            padding: 2rem;
+
+            text-align: center;
+
+            max-width: 800px;
+
+            margin: 2rem auto;
+
+            position: relative;
+
+        }
+
+        .certificate::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+
+            left: 0;
+
+            right: 0;
+
+            bottom: 0;
+
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><text x="10" y="50" font-family="Arial" font-size="10" fill="rgba(37, 99, 235, 0.05)" transform="rotate(-45)">SEOMASTER2025</text></svg>');
+
+            opacity: 0.1;
+
+            z-index: 0;
+
+        }
+
+        .certificate-title {
+
+            font-size: 2rem;
+
+            color: var(--primary);
+
+            margin-bottom: 1rem;
+
+            position: relative;
+
+        }
+
+        .certificate-subtitle {
+
+            font-size: 1rem;
+
+            margin-bottom: 2rem;
+
+            position: relative;
+
+        }
+
+        .certificate-name {
+
+            font-size: 1.5rem;
+
+            font-weight: bold;
+
+            margin: 2rem 0;
+
+            padding: 1rem;
+
+            border-top: 2px dashed var(--primary);
+
+            border-bottom: 2px dashed var(--primary);
+
+            position: relative;
+
+        }
+
+        .certificate-download {
+
+            margin-top: 2rem;
+
+            position: relative;
+
+        }
+
+    </style>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Course Header -->
+
+    <header class="course-header">
+
+        <h1 class="course-title">SEO 2025 Masterclass</h1>
+
+        <p class="course-subtitle">5 New AI-Powered Skills That Will Make You Unstoppable in the Generative Search Era</p>
+
+        <div class="cta-buttons">
+
+            <a href="#enroll" class="btn btn-primary"><i class="fas fa-play-circle"></i> Start Learning</a>
+
+            <a href="#pricing" class="btn btn-outline"><i class="fas fa-tag"></i> Enroll Now</a>
+
+        </div>
+
+    </header>
+
+    <!-- Course Navigation -->
+
+    <nav class="course-nav">
+
+        <div class="nav-container">
+
+            <div class="course-logo">SEO 2025</div>
+
+            <div class="course-progress">
+
+                <div class="progress-bar" id="progressBar"></div>
+
+            </div>
+
+            <div class="course-menu">
+
+                <span id="completedLessons">0</span>/25 Lessons
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- Course Content -->
+
+    <main class="course-container">
+
+        <section id="intro" class="module">
+
+            <div class="module-header">
+
+                <div class="module-number">0</div>
+
+                <h2 class="module-title">Welcome to the SEO 2025 Masterclass</h2>
+
+            </div>
+
+            <p>This comprehensive 20-page course will transform you from traditional SEO practitioner to AI-powered visibility engineer. By the end, you'll master the 5 layers of modern search optimization that dominate in 2025.</p>
+
+            
+
+            <div class="lesson">
+
+                <h3 class="lesson-title">Course Overview</h3>
+
+                <div class="lesson-content">
+
+                    <p>In this course, we'll cover:</p>
+
+                    <ul>
+
+                        <li>The complete SEO 2025 framework (SEO + AIO + GEO + AEO + SXO)</li>
+
+                        <li>25 actionable stages with worksheets and templates</li>
+
+                        <li>How to optimize for ChatGPT, Gemini and other AI search tools</li>
+
+                        <li>Strategies to dominate featured snippets and answer engines</li>
+
+                        <li>Search Experience Optimization (SXO) to convert visitors</li>
+
+                    </ul>
+
+                </div>
+
+                <button class="lesson-complete">Mark as Complete</button>
+
+            </div>
+
+            
+
+            <div class="downloadables">
+
+                <h3 class="download-title"><i class="fas fa-download"></i> Course Resources</h3>
+
+                <div class="download-list">
+
+                    <div class="download-item">
+
+                        <i class="fas fa-file-pdf download-icon"></i>
+
+                        <span>SEO 2025 Workbook</span>
+
+                    </div>
+
+                    <div class="download-item">
+
+                        <i class="fas fa-table download-icon"></i>
+
+                        <span>Keyword Research Template</span>
+
+                    </div>
+
+                    <div class="download-item">
+
+                        <i class="fas fa-check-circle download-icon"></i>
+
+                        <span>AI Optimization Checklist</span>
+
+                    </div>
+
+                    <div class="download-item">
+
+                        <i class="fas fa-sliders-h download-icon"></i>
+
+                        <span>SXO Audit Template</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Module 1: SEO -->
+
+        <section id="module1" class="module">
+
+            <div class="module-header">
+
+                <div class="module-number">1</div>
+
+                <h2 class="module-title">SEO – Search Engine Optimization (The Classic Core)</h2>
+
+            </div>
+
+            <p>SEO is still the backbone. But now it's smarter, faster, and deeper.</p>
+
+            
+
+            <div class="lesson">
+
+                <h3 class="lesson-title">Stage 1: Keywords with Intent</h3>
+
+                <div class="lesson-content">
+
+                    <p>Don't just chase volume. Understand what users want and why.</p>
+
+                    <p><strong>Example:</strong> Instead of "marketing tools," go for "free AI tools for Instagram growth."</p>
+
+                    <div class="quiz">
+
+                        <div class="quiz-question">Which keyword shows clearer intent?</div>
+
+                        <div class="quiz-options">
+
+                            <div class="quiz-option">"best laptops"</div>
+
+                            <div class="quiz-option">"best laptop for video editing under $1000"</div>
+
+                        </div>
+
+                        <div class="quiz-feedback correct">Correct! The second option shows specific intent.</div>
+
+                        <div class="quiz-feedback incorrect">Try again. Look for keywords that reveal user needs.</div>
+
+                    </div>
+
+                </div>
+
+                <button class="lesson-complete">Mark as Complete</button>
+
+            </div>
+
+            
+
+            <div class="lesson">
+
+                <h3 class="lesson-title">Stage 2: Content Architecture</h3>
+
+                <div class="lesson-content">
+
+                    <p>Use H1, H2, internal links, and clear structures. Google loves well-built houses.</p>
+
+                </div>
+
+                <button class="lesson-complete">Mark as Complete</button>
+
+            </div>
+
+            
+
+            <!-- Additional lessons for Module 1 -->
+
+            <div class="lesson">
+
+                <h3 class="lesson-title">Stage 3: Technical SEO</h3>
+
+                <div class="lesson-content">
+
+                    <p>Mobile-friendly design, site speed, HTTPS — these are now minimum entry tickets.</p>
+
+                </div>
+
+                <button class="lesson-complete">Mark as Complete</button>
+
+            </div>
+
+            
+
+            <div class="lesson">
+
+                <h3 class="lesson-title">Stage 4: Internal Linking</h3>
+
+                <div class="lesson-content">
+
+                    <p>Guide Google and users both. Every strong site has a logical map.</p>
+
+                </div>
+
+                <button class="lesson-complete">Mark as Complete</button>
+
+            </div>
+
+            
+
+            <div class="lesson">
+
+                <h3 class="lesson-title">Stage 5: Backlink Authority</h3>
+
+                <div class="lesson-content">
+
+                    <p>Collaborate, guest post, and get linked. In 2025, trust = links.</p>
+
+                </div>
+
+                <button class="lesson-complete">Mark as Complete</button>
+
+            </div>
+
+        </section>
+
+        <!-- Module 2: AIO -->
+
+        <section id="module2" class="module">
+
+            <div class="module-header">
+
+                <div class="module-number">2</div>
+
+                <h2 class="module-title">AIO – AI Optimization (Train the AI, Don't Just Trick Google)</h2>
+
+            </div>
+
+            <p>AI tools like ChatGPT, Gemini, and Claude are the new search engines.</p>
+
+            
+
+            <div class="lesson">
+
+                <h3 class="lesson-title">Stage 6: Q&A Format Wins</h3>
+
+                <div class="lesson-content">
+
+                    <p>AI prefers clean, clear answers. Ask your own questions — then answer them smartly.</p>
+
+                </div>
+
+                <button class="lesson-complete">Mark as Complete</button>
+
+            </div>
+
+            
+
+            <!-- Additional lessons for Module 2 -->
+
+            <div class="lesson">
+
+                <h3 class="lesson-title">Stage 7: Structured Content</h3>
+
+                <div class="lesson-content">
+
+                    <p>Follow this template: Hook → Question → Answer → CTA. It's AI-friendly and user-happy.</p>
+
+                </div>
+
+                <button class="lesson-complete">Mark as Complete</button>
+
+            </div>
+
+            
+
+            <div class="lesson">
+
+                <h3 class="lesson-title">Stage 8: Reverse Engineer AI</h3>
+
+                <div class="lesson-content">
+
+                    <p>Search your own name or topic in ChatGPT. Not mentioned? Improve your content until you are.</p>
+
+                </div>
+
+                <button class="lesson-complete">Mark as Complete</button>
+
+            </div>
+
+            
+
+            <div class="lesson">
+
+                <h3 class="lesson-title">Stage 9: Schema Markup</h3>
+
+                <div class="lesson-content">
+
+                    <p>Use structured data to help AI "read" your pages better.</p>
+
+                </div>
+
+                <button class="lesson-complete">Mark as Complete</button>
+
+            </div>
+
+            
+
+            <div class="lesson">
+
+                <h3 class="lesson-title">Stage 10: Brand Consistency</h3>
+
+                <div class="lesson-content">
+
+                    <p>Same topic, tone, and value in every post = AI recognition. Become a trusted signal.</p>
+
+                </div>
+
+                <button class="lesson-complete">Mark as Complete</button>
+
+            </div>
+
+        </section>
+
+        <!-- Continue with Modules 3-5 following the same pattern -->
+
+        <!-- Module 3: GEO -->
+
+        <section id="module3" class="module">
+
+            <div class="module-header">
+
+                <div class="module-number">3</div>
+
+                <h2 class="module-title">GEO – Generative Engine Optimization (Rank Inside ChatGPT)</h2>
+
+            </div>
+
+            <!-- GEO lessons here -->
+
+        </section>
+
+        <!-- Module 4: AEO -->
+
+        <section id="module4" class="module">
+
+            <div class="module-header">
+
+                <div class="module-number">4</div>
+
+                <h2 class="module-title">AEO – Answer Engine Optimization (Win Featured Snippets & Direct Answers)</h2>
+
+            </div>
+
+            <!-- AEO lessons here -->
+
+ 
